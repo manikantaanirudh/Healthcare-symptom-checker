@@ -19,7 +19,7 @@ The Healthcare Symptom Checker is a web application that accepts symptom descrip
 
 ### Backend (FastAPI)
 - **REST API**: Clean, well-documented API endpoints
-- **LLM Integration**: OpenAI GPT-4 integration with structured prompts
+- **LLM Integration**: Google Gemini integration with structured prompts
 - **Database**: SQLite database for storing query history
 - **Safety Features**: Red flag detection, comprehensive disclaimers
 - **Modular Design**: Clear separation of concerns (Controller → Service → LLM Client → Model)
@@ -35,7 +35,7 @@ The Healthcare Symptom Checker is a web application that accepts symptom descrip
 ### Prerequisites
 - Python 3.8+
 - Node.js 16+
-- OpenAI API key
+- Google Gemini API key
 
 ### Backend Setup
 
@@ -52,14 +52,12 @@ The Healthcare Symptom Checker is a web application that accepts symptom descrip
 3. **Set up environment variables**:
    ```bash
    cp .env.example .env
-   # Edit .env and add your OpenAI API key
+   # Edit .env and add your Gemini API key
    ```
 
 4. **Run the backend**:
    ```bash
-   python -m app.main
-   # or
-   uvicorn app.main:app --reload
+   python run.py
    ```
 
 The backend will be available at `http://localhost:8000`
@@ -73,7 +71,7 @@ The backend will be available at `http://localhost:8000`
 
 2. **Install dependencies**:
    ```bash
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 3. **Set up environment variables** (optional):
@@ -233,4 +231,3 @@ For questions or issues, please create an issue in the repository.
 ---
 
 **Remember**: This tool is for educational purposes only and is NOT a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for proper medical care.
-
