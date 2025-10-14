@@ -4,6 +4,7 @@ services:
     name: healthcare-symptom-checker-api
     env: python
     plan: free
+    pythonVersion: 3.11.9
     buildCommand: pip install -r backend/requirements.txt
     startCommand: cd backend && python run.py
     envVars:
