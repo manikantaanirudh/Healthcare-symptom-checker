@@ -1,0 +1,34 @@
+services:
+  # Backend API Service
+  - type: web
+    name: healthcare-symptom-checker-api
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && python run.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # You'll set this in Render dashboard
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: DATABASE_URL
+        value: sqlite:///./healthcare_symptom_checker.db
+      - key: LOG_LEVEL
+        value: INFO
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: RELOAD
+        value: "false"
+
+  # Frontend Static Site
+  - type: web
+    name: healthcare-symptom-checker-frontend
+    env: static
+    plan: free
+    buildCommand: cd frontend && npm install --legacy-peer-deps && npm run build
+    staticPublishPath: frontend/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://healthcare-symptom-checker-api.onrender.com
