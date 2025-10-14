@@ -32,4 +32,4 @@ services:
     staticPublishPath: frontend/build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://healthcare-symptom-checker-api.onrender.com
+        value: https://healthcare-symptom-checker-pu6t.onrender.com
