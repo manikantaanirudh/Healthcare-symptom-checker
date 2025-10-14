@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { SymptomCheckRequest, SymptomCheckResponse, HistoryResponse, QueryHistory } from '../types';
 
 // Configure axios base URL
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://healthcare-symptom-checker-pu6t.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
