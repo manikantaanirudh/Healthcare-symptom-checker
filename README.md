@@ -214,6 +214,10 @@ healthcare-symptom-checker/
 ##Project Live link
 https://healthcare-symptom-checker-frontend.onrender.com/
 
+## Project Demo Video
+
+Watch the demo: https://drive.google.com/file/d/13epNAiPS3F1xyWl8lLFTnc0thY5uFGO9/view?usp=sharing
+
 ## Contributing
 
 1. Fork the repository
